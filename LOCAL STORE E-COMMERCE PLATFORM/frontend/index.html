@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOCAL STORE E-COMMERCE PLATFORM</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div id="navMount"></div>
+
+    <div class="hero">
+      <div class="container">
+        <div class="hero-card glass">
+          <div>
+            <h2>Shop Local. Fast. Simple.</h2>
+            <p class="muted">
+              Browse products, add to cart, and checkout securely (JWT + bcrypt + protected APIs).
+            </p>
+          </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end">
+            <div class="pill">
+              <input id="searchInput" placeholder="Search products..." />
+              <button class="btn" id="searchBtn">Search</button>
+            </div>
+            <div class="pill">
+              <select id="categorySelect"></select>
+            </div>
+            <div class="pill">
+              <select id="sortSelect">
+                <option value="">Sort</option>
+                <option value="price_asc">Price: Low → High</option>
+                <option value="price_desc">Price: High → Low</option>
+                <option value="name_asc">Name: A → Z</option>
+                <option value="name_desc">Name: Z → A</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="grid">
+        <section class="products glass">
+          <div class="section-title">
+            <h3>Products</h3>
+            <span class="muted">Search, filter & sort</span>
+          </div>
+
+          <div id="productsMount"></div>
+        </section>
+
+        <aside class="cart glass" id="cartMount"></aside>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="container">© <span id="year"></span> LOCAL STORE • Built with HTML, CSS, JS, Node, Express & MongoDB</div>
+    </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>
+

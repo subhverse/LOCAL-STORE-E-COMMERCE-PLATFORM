@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout • LOCAL STORE</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div id="navMount"></div>
+
+    <div class="container" style="padding: 18px 0 50px">
+      <div class="row2">
+        <div class="form-card glass" style="width:100%">
+          <h2>Checkout</h2>
+          <p class="muted">Customer details</p>
+
+          <form id="checkoutForm">
+            <div class="field">
+              <label>Full Name</label>
+              <input id="fullName" required placeholder="e.g., Rahul Sharma" />
+            </div>
+            <div class="field">
+              <label>Phone</label>
+              <input id="phone" required placeholder="e.g., 9876543210" />
+            </div>
+            <div class="field">
+              <label>Address</label>
+              <textarea id="address" required placeholder="House no, street, area..."></textarea>
+            </div>
+            <div class="row2">
+              <div class="field">
+                <label>City</label>
+                <input id="city" required placeholder="e.g., Kolkata" />
+              </div>
+              <div class="field">
+                <label>Pincode</label>
+                <input id="pincode" required placeholder="e.g., 700001" />
+              </div>
+            </div>
+            <button class="btn primary" style="width:100%" type="submit">Place Order</button>
+          </form>
+        </div>
+
+        <div class="products glass" style="border-radius:16px; padding:16px">
+          <div class="section-title">
+            <h3>Order Summary</h3>
+            <span class="muted">Your cart</span>
+          </div>
+          <div id="summaryMount"></div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/js/checkout.js"></script>
+  </body>
+</html>
+

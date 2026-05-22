@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support • LOCAL STORE</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div id="navMount"></div>
+
+    <div class="container" style="padding: 18px 0 60px">
+      <div class="form-card glass" style="width:min(760px,92%)">
+        <h2>Customer Support</h2>
+        <p class="muted">
+          This is a simple (beginner-friendly) support section. In a real project, you could connect this to email,
+          WhatsApp, or a helpdesk tool.
+        </p>
+
+        <div class="row2" style="margin-top:14px">
+          <div class="card" style="padding:14px; border-radius:16px">
+            <div style="font-weight:900">Email</div>
+            <div class="muted">support@localstore.com</div>
+          </div>
+          <div class="card" style="padding:14px; border-radius:16px">
+            <div style="font-weight:900">Phone</div>
+            <div class="muted">+91 90000 00000</div>
+          </div>
+        </div>
+
+        <div class="card" style="padding:14px; border-radius:16px; margin-top:14px">
+          <div style="font-weight:900; margin-bottom:8px">FAQs</div>
+          <div class="muted">
+            • Login required for cart & orders<br />
+            • Products are loaded from MongoDB<br />
+            • Orders reduce stock automatically
+          </div>
+        </div>
+
+        <div style="margin-top:14px">
+          <a class="btn" href="/index.html">Back to store</a>
+        </div>
+      </div>
+    </div>
+
+    <script type="module">
+      import { renderNavbar, wireNavbar } from "/js/navbar.js";
+      const navMount = document.querySelector("#navMount");
+      navMount.innerHTML = renderNavbar("support");
+      wireNavbar();
+    </script>
+  </body>
+</html>
+
